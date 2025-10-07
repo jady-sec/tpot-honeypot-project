@@ -30,7 +30,7 @@ T-Pot CE was cloned from GitHub and installed on Ubuntu 24.04 LTS with the Stand
 - Top attackers from countries like Taiwan and US, with patterns like repeated "root" logins.
 - SpiderFoot scan on a top IP revealed the malicious IP addresses on the same subnet and several malicious co relations.
 
-![Spiderfoot-results](spiderfoot_scan.png)
+![Spiderfoot-results](malicious_subnets.png)
 
 ## Credits
 - T-Pot CE by Telekom Security.
