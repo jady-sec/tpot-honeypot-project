@@ -3,7 +3,7 @@
 ## Overview
 This project involves deploying T-Pot CE on a Vultr VPS to capture and analyze cyber threats. The setup uses multiple honeypots to attract attackers, logs the interactions, and visualizes the data in a Kibana dashboard. Additionally, SpiderFoot was used to perform OSINT on a top attacker IP for deeper insights. The focus was on practical threat detection without custom scripting or alerting rules.
 
-[Insert screenshot here: T-Pot web interface showing the attack map and overall stats]
+![Tpot-web-interface](tpot_web.png)
 
 ## Features
 - **Honeypot Deployment:** T-Pot CE with Cowrie, Dionaea, and SentryPeer honeypots capturing over 100k attacks, including SSH brute-force, multi-protocol exploits, and SIP probes.
