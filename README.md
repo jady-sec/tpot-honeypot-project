@@ -9,26 +9,26 @@ This project involves deploying T-Pot CE on a Vultr VPS to capture and analyze c
 - **Honeypot Deployment:** T-Pot CE with Cowrie, Dionaea, and SentryPeer honeypots capturing over 600k attacks, including SSH brute-force, multi-protocol exploits, and SIP probes.
 
   ![attack-map](tpot_attack_map.png)
-  ###Fig 1: Attack map for last 24 hours
-- **Data Visualization:** Kibana dashboard with pie charts for top attackers, bar charts for attack types, and geolocation maps for origin tracking.
+  Fig 1: Attack map for last 24 hours
+- **Data Visualization:** Kibana dashboard with a table of top attackers, Histograms for different attacks, heatmaps for destination ports, and geolocation maps for origin tracking.
 
   ![Kibana-dashboard-1](dashboard_1.png)
-  ###Fig 2: Top attacks by honeypot and other details**
+  Fig 2: Top attacks by honeypot and other details**
   
   ![Kibana-dashboard-2](dashboard_2.png)
-  ###Fig 3: Top cli inputs tried by attackers and suricata detections by country**
+  Fig 3: Top cli inputs tried by attackers and suricata detections by country**
   
 - **OSINT Integration:** SpiderFoot scan on a top attacker IP to gather additional intel like associated domains and reputation.
 
-
+  ![Spiderfoot-results](spiderfoot_scan.png)
 
 ## Setup and Configuration
 T-Pot CE was cloned from GitHub and installed on Ubuntu 24.04 LTS with the Standard edition. Ports were exposed via UFW to allow honeypot traffic. The web interface and Kibana were accessed via the VPS IP for monitoring and visualization.
 
 ## Analysis and Findings
-- Captured 19k brute-force logins, 254 successful logins, and 4.5k command inputs.
-- Top attackers from countries like UAE and US, with patterns like repeated "root" logins.
-- SpiderFoot scan on a top IP revealed malware-linked domains and geographic details.
+- Captured 600k brute-force logins and over 40k command inputs throughout the world.
+- Top attackers from countries like Taiwan and US, with patterns like repeated "root" logins.
+- SpiderFoot scan on a top IP revealed malware-linked domains and several malicious co relations.
 
 [Insert screenshot here: SpiderFoot scan results for the top attacker IP, showing OSINT output]
 
