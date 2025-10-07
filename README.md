@@ -1,7 +1,7 @@
 # T-Pot Honeypot Project
 
 ## Overview
-This project involves deploying T-Pot CE on a Vultr VPS to capture and analyze cyber threats. The setup uses multiple honeypots to attract attackers, logs the interactions, and visualizes the data in a Kibana dashboard. Additionally, SpiderFoot was used to perform OSINT on a top attacker IP for deeper insights. The focus was on practical threat detection without custom scripting or alerting rules.
+This project involves deploying T-Pot CE on a Vultr VPS to capture and analyze cyber threats. The setup uses multiple honeypots to attract attackers, logs the interactions, and visualizes the data in a Kibana dashboard. Additionally, SpiderFoot was used to perform OSINT on a top attacker IP for deeper insights. The focus was on practical threat detection along with OSINT reconnaisance about a specific attacker.
 
 ![Tpot-web-interface](tpot_web.png)
 
@@ -10,17 +10,19 @@ This project involves deploying T-Pot CE on a Vultr VPS to capture and analyze c
 
   ![attack-map](tpot_attack_map.png)
   Fig 1: Attack map for last 24 hours
+  
 - **Data Visualization:** Kibana dashboard with a table of top attackers, Histograms for different attacks, heatmaps for destination ports, and geolocation maps for origin tracking.
 
   ![Kibana-dashboard-1](dashboard_1.png)
-  Fig 2: Top attacks by honeypot and other details**
+  Fig 2: Top attacks by honeypot and other details
   
   ![Kibana-dashboard-2](dashboard_2.png)
-  Fig 3: Top cli inputs tried by attackers and suricata detections by country**
+  Fig 3: Top cli inputs tried by attackers and suricata detections by country
   
 - **OSINT Integration:** SpiderFoot scan on a top attacker IP to gather additional intel and correlations with the threat intelligence.
 
   ![Spiderfoot-results](spiderfoot_scan.png)
+  Fig 4: Correlations of the target IP using spiderfoot scan
 
 ## Setup and Configuration
 T-Pot CE was cloned from GitHub and installed on Ubuntu 24.04 LTS with the Standard edition. Ports were exposed via UFW to allow honeypot traffic. The web interface and Kibana were accessed via the VPS IP for monitoring and visualization.
@@ -31,9 +33,8 @@ T-Pot CE was cloned from GitHub and installed on Ubuntu 24.04 LTS with the Stand
 - SpiderFoot scan on a top IP revealed the malicious IP addresses on the same subnet and several malicious co relations.
 
 ![Spiderfoot-results](malicious_subnets.png)
+Fig 5: Several IP addresses of the same subnet is flagged malicious making it one of the known attacker/scanner
 
 ## Credits
 - T-Pot CE by Telekom Security.
 - Vultr VPS for hosting.
-
-[MIT License]
