@@ -18,7 +18,7 @@ This project involves deploying T-Pot CE on a Vultr VPS to capture and analyze c
   ![Kibana-dashboard-2](dashboard_2.png)
   Fig 3: Top cli inputs tried by attackers and suricata detections by country**
   
-- **OSINT Integration:** SpiderFoot scan on a top attacker IP to gather additional intel like associated domains and reputation.
+- **OSINT Integration:** SpiderFoot scan on a top attacker IP to gather additional intel and correlations with the threat intelligence.
 
   ![Spiderfoot-results](spiderfoot_scan.png)
 
@@ -28,9 +28,9 @@ T-Pot CE was cloned from GitHub and installed on Ubuntu 24.04 LTS with the Stand
 ## Analysis and Findings
 - Captured 600k brute-force logins and over 40k command inputs throughout the world.
 - Top attackers from countries like Taiwan and US, with patterns like repeated "root" logins.
-- SpiderFoot scan on a top IP revealed malware-linked domains and several malicious co relations.
+- SpiderFoot scan on a top IP revealed the malicious IP addresses on the same subnet and several malicious co relations.
 
-[Insert screenshot here: SpiderFoot scan results for the top attacker IP, showing OSINT output]
+![Spiderfoot-results](spiderfoot_scan.png)
 
 ## Credits
 - T-Pot CE by Telekom Security.
