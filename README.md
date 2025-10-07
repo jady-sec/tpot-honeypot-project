@@ -9,12 +9,14 @@ This project involves deploying T-Pot CE on a Vultr VPS to capture and analyze c
 - **Honeypot Deployment:** T-Pot CE with Cowrie, Dionaea, and SentryPeer honeypots capturing over 600k attacks, including SSH brute-force, multi-protocol exploits, and SIP probes.
 
   ![attack-map](tpot_attack_map.png)
-  ** Fig 1: Attack map for last 24 hours**
+  ###Fig 1: Attack map for last 24 hours
 - **Data Visualization:** Kibana dashboard with pie charts for top attackers, bar charts for attack types, and geolocation maps for origin tracking.
+
   ![Kibana-dashboard-1](dashboard_1.png)
-   ** Fig 2: Top attacks by honeypot and other details**
+  ###Fig 2: Top attacks by honeypot and other details**
+  
   ![Kibana-dashboard-2](dashboard_2.png)
-  ** Fig 3: Top cli inputs tried by attackers and suricata detections by country**
+  ###Fig 3: Top cli inputs tried by attackers and suricata detections by country**
   
 - **OSINT Integration:** SpiderFoot scan on a top attacker IP to gather additional intel like associated domains and reputation.
 
